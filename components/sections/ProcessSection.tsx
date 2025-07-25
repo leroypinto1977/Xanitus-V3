@@ -52,7 +52,7 @@ export function ProcessSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Our <span className="text-purple-400">Process</span>
+            Our <span className="text-[#a0ff4a]">Process</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             A proven methodology that delivers exceptional results
@@ -61,7 +61,7 @@ export function ProcessSection() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-purple-500 to-pink-500 rounded-full hidden lg:block" />
+          <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-[#393e42] rounded-full hidden lg:block" />
 
           {processSteps.map((step, index) => (
             <motion.div
@@ -79,18 +79,18 @@ export function ProcessSection() {
                   index % 2 === 0 ? "lg:pr-8" : "lg:pl-8"
                 }`}
               >
-                <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-400 transition-all duration-300">
+                <Card className="bg-slate-800/50 border-slate-700 hover:border-white transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <step.icon className="h-6 w-6 text-white" />
+                      <div className="w-12 h-12 bg-[#393e42] rounded-full flex items-center justify-center flex-shrink-0">
+                        <step.icon className="h-6 w-6 text-[#a0ff4a]" />
                       </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-2">
                           {step.title}
                         </h3>
                         <p className="text-gray-300 mb-3">{step.description}</p>
-                        <div className="text-sm text-purple-400 font-semibold">
+                        <div className="text-sm text-[#a0ff4a] font-semibold">
                           Duration: {step.duration}
                         </div>
                       </div>
@@ -101,7 +101,7 @@ export function ProcessSection() {
 
               {/* Timeline dot */}
               <div className="hidden lg:block w-2/12 flex justify-center">
-                <div className="w-6 h-6 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full border-4 border-slate-900 z-10" />
+                <div className="w-6 h-6 bg-[#a0ff4a] rounded-full border-4 border-slate-900 z-10" />
               </div>
 
               <div className="hidden lg:block w-5/12" />

@@ -65,7 +65,7 @@ export function ClientSuccessSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Client <span className="text-purple-400">Success Stories</span>
+            Client <span className="text-[#a0ff4a]">Success Stories</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Real results from real clients who trusted us with their digital
@@ -82,7 +82,7 @@ export function ClientSuccessSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
             >
-              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-400 transition-all duration-300 h-full">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-white transition-all duration-300 h-full">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     <img
@@ -109,13 +109,13 @@ export function ClientSuccessSection() {
                     ))}
                   </div>
 
-                  <Quote className="h-8 w-8 text-purple-400 mb-4" />
+                  <Quote className="h-8 w-8 text-[#a0ff4a] mb-4" />
                   <p className="text-gray-300 mb-4 italic">
                     {`${testimonial.content}`}
                   </p>
 
                   <div className="mb-4">
-                    <h4 className="text-purple-400 font-semibold mb-2">
+                    <h4 className="text-[#a0ff4a] font-semibold mb-2">
                       Project: {testimonial.project}
                     </h4>
                     <div className="flex flex-wrap gap-2">
@@ -123,7 +123,7 @@ export function ClientSuccessSection() {
                         <Badge
                           key={result}
                           variant="secondary"
-                          className="bg-green-900/30 text-green-300 border-green-500/30"
+                          className="bg-[#393e42]/30 text-[#a0ff4a] border-[#393e42]/30"
                         >
                           {result}
                         </Badge>

@@ -55,7 +55,7 @@ export function BlogSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Latest <span className="text-purple-400">Insights</span>
+            Latest <span className="text-[#a0ff4a]">Insights</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Stay updated with the latest trends and insights in technology
@@ -71,22 +71,22 @@ export function BlogSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
             >
-              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-400 transition-all duration-300 h-full group cursor-pointer">
+              <Card className="bg-slate-800/50 border-slate-700 pt-0 hover:border-white transition-all duration-300 h-full group cursor-pointer">
                 <div className="relative overflow-hidden">
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-48 object-cover rounded-t-2xl hover:rounded-t-2xl transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">
-                    <Badge className="bg-purple-600 text-white">
+                    <Badge className="bg-[#a0ff4a] text-black">
                       {post.category}
                     </Badge>
                   </div>
                 </div>
 
                 <CardHeader className="pb-3">
-                  <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors line-clamp-2">
+                  <h3 className="text-xl font-bold text-white group-hover:text-[#a0ff4a] transition-colors line-clamp-2">
                     {post.title}
                   </h3>
                 </CardHeader>
@@ -113,7 +113,7 @@ export function BlogSection() {
                     <span className="text-sm text-gray-400">
                       By {post.author}
                     </span>
-                    <ArrowRight className="h-4 w-4 text-purple-400 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="h-4 w-4 text-[#a0ff4a] group-hover:translate-x-1 transition-transform" />
                   </div>
                 </CardContent>
               </Card>
@@ -131,7 +131,7 @@ export function BlogSection() {
           <Button
             size="lg"
             variant="outline"
-            className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
+            className="border-[#a0ff4a] text-[#a0ff4a] hover:bg-[#a0ff4a] hover:text-black px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
           >
             View All Articles
             <ArrowRight className="ml-2 h-5 w-5" />

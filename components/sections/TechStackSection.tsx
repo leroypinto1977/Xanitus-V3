@@ -15,22 +15,22 @@ const techCategories = [
       "Tailwind CSS",
       "Framer Motion",
     ],
-    color: "from-blue-500 to-cyan-500",
+    color: "bg-[#ffffff]",
   },
   {
     name: "Backend",
     technologies: ["Node.js", "Python", "PostgreSQL", "MongoDB", "Redis"],
-    color: "from-green-500 to-emerald-500",
+    color: "bg-[#a0ff4a]",
   },
   {
     name: "Mobile",
     technologies: ["React Native", "Flutter", "Swift", "Kotlin", "Expo"],
-    color: "from-purple-500 to-pink-500",
+    color: "bg-[#ffffff]",
   },
   {
     name: "Cloud",
     technologies: ["AWS", "Azure", "Google Cloud", "Docker", "Kubernetes"],
-    color: "from-orange-500 to-red-500",
+    color: "bg-[#a0ff4a]",
   },
   {
     name: "DevOps",
@@ -41,7 +41,7 @@ const techCategories = [
       "Ansible",
       "Monitoring",
     ],
-    color: "from-cyan-500 to-blue-500",
+    color: "bg-[#ffffff]",
   },
   {
     name: "AI/ML",
@@ -52,7 +52,7 @@ const techCategories = [
       "Hugging Face",
       "Scikit-learn",
     ],
-    color: "from-pink-500 to-purple-500",
+    color: "bg-[#a0ff4a]",
   },
 ];
 
@@ -68,7 +68,7 @@ export function TechStackSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Technology <span className="text-purple-400">Stack</span>
+            Technology <span className="text-[#a0ff4a]">Stack</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Cutting-edge technologies powering our solutions
@@ -84,10 +84,10 @@ export function TechStackSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
             >
-              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-400 transition-all duration-300 h-full">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-white transition-all duration-300 h-full">
                 <CardContent className="p-6">
                   <div
-                    className={`w-full h-2 bg-gradient-to-r ${category.color} rounded-full mb-4`}
+                    className={`w-full h-2 ${category.color} rounded-full mb-4`}
                   />
                   <h3 className="text-xl font-bold text-white mb-4">
                     {category.name}
@@ -97,7 +97,7 @@ export function TechStackSection() {
                       <Badge
                         key={tech}
                         variant="secondary"
-                        className="bg-purple-900/30 text-purple-300 border-purple-500/30 hover:bg-purple-900/50 transition-colors"
+                        className="bg-[#393e42]/30 text-[#a0ff4a] border-[#393e42]/30 hover:bg-[#393e42]/50 transition-colors"
                       >
                         {tech}
                       </Badge>

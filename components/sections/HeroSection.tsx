@@ -13,9 +13,9 @@ export function HeroSection() {
     { text: "Transforming" },
     { text: "Businesses" },
     { text: "Through" },
-    { text: "Tailored", className: "text-purple-400" },
-    { text: "IT", className: "text-purple-400" },
-    { text: "Solutions", className: "text-purple-400" },
+    { text: "Tailored", className: "text-[#a0ff4a]" },
+    { text: "IT", className: "text-[#a0ff4a]" },
+    { text: "Solutions", className: "text-[#a0ff4a]" },
   ];
 
   return (
@@ -53,7 +53,7 @@ export function HeroSection() {
           >
             <Button
               size="lg"
-              className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
+              className="bg-[#393e42] hover:bg-[#2a2e31] text-white px-8 py-3 rounded-md transform hover:scale-105 transition-all duration-300"
             >
               Start Your Digital Journey
               <ChevronRight className="ml-2 h-5 w-5" />
@@ -62,7 +62,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white px-8 py-3 rounded-full transform hover:scale-105 transition-all duration-300"
+              className="border-black text-black hover:bg-[#a0ff4a] hover:text-black px-8 py-3 rounded-md transform hover:scale-105 transition-all duration-300"
             >
               <Play className="mr-2 h-5 w-5" />
               View Our Work

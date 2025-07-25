@@ -44,7 +44,7 @@ export function WhyChooseSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Why Choose <span className="text-purple-400">Xanitus</span>
+            Why Choose <span className="text-[#a0ff4a]">Xanitus</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             We deliver excellence through innovation, expertise, and dedication
@@ -60,13 +60,13 @@ export function WhyChooseSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
             >
-              <Card className="bg-slate-800/50 border-slate-700 hover:border-purple-400 transition-all duration-300 h-full">
+              <Card className="bg-slate-800/50 border-slate-700 hover:border-white transition-all duration-300 h-full">
                 <CardHeader>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                      <benefit.icon className="h-6 w-6 text-white" />
+                  <div className="flex items-center space-x-4 ">
+                    <div className="w-12 h-12 bg-[#393e42] rounded-lg flex items-center justify-center">
+                      <benefit.icon className="h-6 w-6 text-[#a0ff4a]" />
                     </div>
-                    <CardTitle className="text-white text-xl">
+                    <CardTitle className="text-white  text-xl">
                       {benefit.title}
                     </CardTitle>
                   </div>

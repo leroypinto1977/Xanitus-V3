@@ -8,9 +8,9 @@ import { Badge } from "@/components/ui/badge";
 import { CountUp } from "../ui/CountUp";
 
 const stats = [
-  { number: 500, label: "Clients Served", suffix: "+" },
-  { number: 50, label: "Countries Reached", suffix: "+" },
-  { number: 1, label: "Lines of Code", suffix: "M+" },
+  { number: 50, label: "Clients Served", suffix: "+" },
+  { number: 10, label: "Countries Reached", suffix: "+" },
+  { number: 50, label: "Lines of Code", suffix: "K+" },
   { number: 99.9, label: "Uptime", suffix: "%" },
 ];
 
@@ -26,7 +26,7 @@ export function GlobalImpactSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Global <span className="text-purple-400">Impact</span>
+            Global <span className="text-[#a0ff4a]">Impact</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-2xl mx-auto">
             Trusted by businesses worldwide to deliver exceptional results
@@ -42,7 +42,7 @@ export function GlobalImpactSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.1 }}
             >
-              <Card className="bg-gradient-to-br from-purple-900/50 to-pink-900/50 border-purple-500/30 text-center">
+              <Card className="bg-[#393e42]/50 border-[#393e42]/30 text-center">
                 <CardContent className="p-6">
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                     <CountUp end={stat.number} suffix={stat.suffix} />
@@ -62,7 +62,7 @@ export function GlobalImpactSection() {
           transition={{ duration: 1 }}
           className="flex justify-center"
         >
-          <div className="w-96 h-96 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full flex items-center justify-center border border-purple-500/30">
+          <div className="w-96 h-96 bg-[#393e42]/20 rounded-full flex items-center justify-center border border-[#a0ff4a]/30">
             <div className="text-center">
               <div className="text-6xl mb-4">🌍</div>
               <p className="text-white font-semibold">Interactive 3D Globe</p>

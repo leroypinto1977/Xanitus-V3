@@ -14,29 +14,39 @@ export function FloatingElements() {
 
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {elements.map((element, index) => (
-        <motion.div
-          key={index}
-          className="absolute rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 backdrop-blur-sm"
-          style={{
-            width: element.size,
-            height: element.size,
-            left: `${Math.random() * 100}%`,
-            top: `${Math.random() * 100}%`,
-          }}
-          animate={{
-            y: [0, -30, 0],
-            x: [0, 20, 0],
-            rotate: [0, 360],
-          }}
-          transition={{
-            duration: element.duration,
-            delay: element.delay,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-        />
-      ))}
+      {elements.map((element, index) => {
+        // Randomly select green color combinations for each element
+        const greenGradients = [
+          "from-green-400/10 to-green-600/10",
+          "from-green-500/10 to-green-400/10",
+          "from-green-600/10 to-green-500/10"
+        ];
+        const randomGradient = greenGradients[Math.floor(Math.random() * greenGradients.length)];
+        
+        return (
+          <motion.div
+            key={index}
+            className={`absolute rounded-full bg-gradient-to-r ${randomGradient} backdrop-blur-sm`}
+            style={{
+              width: element.size,
+              height: element.size,
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [0, -30, 0],
+              x: [0, 20, 0],
+              rotate: [0, 360],
+            }}
+            transition={{
+              duration: element.duration,
+              delay: element.delay,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          />
+        );
+      })}
     </div>
   );
 }

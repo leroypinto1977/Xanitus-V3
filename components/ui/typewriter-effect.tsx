@@ -40,7 +40,7 @@ export const TypewriterEffect = ({
           repeat: Infinity,
           repeatType: "reverse",
         }}
-        className={cn("text-purple-400", cursorClassName)}
+        className={cn("text-[#a0ff4a]", cursorClassName)}
       >
         |
       </motion.span>

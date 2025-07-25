@@ -112,19 +112,27 @@ import { TechStackSection } from "@/components/sections/TechStackSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { CTASection } from "@/components/sections/CTASection";
+import { BookingSection } from "@/components/sections/BookingSection";
+import { Navbar } from "@/components/ui/navbar";
+import { Footer } from "@/components/ui/footer";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
-      <HeroSection />
-      <ServicesSection />
-      <GlobalImpactSection />
-      <WhyChooseSection />
-      <ClientSuccessSection />
-      <TechStackSection />
-      <ProcessSection />
-      <BlogSection />
-      <CTASection />
-    </main>
+    <>
+      <Navbar />
+      <main className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 pt-16">
+        <HeroSection />
+        <ServicesSection />
+        <GlobalImpactSection />
+        <WhyChooseSection />
+        {/* <ClientSuccessSection /> */}
+        <TechStackSection />
+        <ProcessSection />
+        <BlogSection />
+        {/* <CTASection /> */}
+        <BookingSection />
+      </main>
+      <Footer />
+    </>
   );
 }
