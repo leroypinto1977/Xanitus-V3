@@ -6,6 +6,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 const blogPosts = [
   {
@@ -73,9 +74,11 @@ export function BlogSection() {
             >
               <Card className="bg-slate-800/50 border-slate-700 pt-0 hover:border-white transition-all duration-300 h-full group cursor-pointer">
                 <div className="relative overflow-hidden">
-                  <img
+                  <Image
                     src={post.image}
                     alt={post.title}
+                    width={400}
+                    height={200}
                     className="w-full h-48 object-cover rounded-t-2xl hover:rounded-t-2xl transition-transform duration-300"
                   />
                   <div className="absolute top-4 left-4">

@@ -72,27 +72,27 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="#services" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
+                <Link href="/services" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="#about" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
+                <Link href="/about" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="#portfolio" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
+                <Link href="/portfolio" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
                   Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="#blog" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
+                <Link href="/blog" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
                   Blog
                 </Link>
               </li>
               <li>
-                <Link href="#contact" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
+                <Link href="/contact" className="text-gray-300 hover:text-[#a0ff4a] transition-colors">
                   Contact
                 </Link>
               </li>

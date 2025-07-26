@@ -2,9 +2,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ChevronRight, Mail, Phone, MessageSquare } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+// import { ChevronRight, Mail, Phone, MessageSquare } from "lucide-react";
+// import { Button } from "@/components/ui/button";
+// import { Card, CardContent } from "@/components/ui/card";
 
 export function CTASection() {
   return (

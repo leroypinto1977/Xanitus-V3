@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Star, Quote } from "lucide-react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -85,9 +86,11 @@ export function ClientSuccessSection() {
               <Card className="bg-slate-800/50 border-slate-700 hover:border-white transition-all duration-300 h-full">
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
-                    <img
+                    <Image
                       src={testimonial.image}
                       alt={testimonial.name}
+                      width={48}
+                      height={48}
                       className="w-12 h-12 rounded-full mr-4 object-cover"
                     />
                     <div>

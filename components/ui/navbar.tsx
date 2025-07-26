@@ -10,11 +10,11 @@ export function Navbar() {
 
   const navItems = [
     { name: "Home", href: "/" },
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Portfolio", href: "#portfolio" },
-    { name: "Blog", href: "#blog" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/services" },
+    { name: "About", href: "/about" },
+    { name: "Portfolio", href: "/portfolio" },
+    { name: "Blog", href: "/blog" },
+    { name: "Contact", href: "/contact" },
   ];
 
   return (
@@ -55,7 +55,7 @@ export function Navbar() {
           {/* Contact Button */}
           <div className="hidden md:block">
             <Link
-              href="#booking"
+              href="/contact#booking"
               className="bg-[#a0ff4a] text-black px-4 py-2 rounded-md font-medium hover:bg-[#8ce042] transition-colors"
             >
               Book a Call
@@ -85,7 +85,7 @@ export function Navbar() {
               </Link>
             ))}
             <Link
-              href="#booking"
+              href="/contact#booking"
               className="block bg-[#a0ff4a] text-black px-4 py-2 rounded-md font-medium hover:bg-[#8ce042] transition-colors w-full text-center mt-4"
               onClick={() => setIsMenuOpen(false)}
             >
