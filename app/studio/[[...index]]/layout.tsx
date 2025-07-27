@@ -1,12 +1,12 @@
 export const metadata = {
-  title: 'Xanitus CMS',
-  description: 'Content Management System for Xanitus',
-}
+  title: "Xanitus CMS",
+  description: "Content Management System for Xanitus",
+};
 
-export default function RootLayout({
+export default function StudioLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-  return children
+  return children;
 }
