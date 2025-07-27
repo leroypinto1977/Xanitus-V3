@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import { sampleBlogPosts } from "@/data/sampleData";
 
 export const metadata: Metadata = {
   title: "Blog | Xanitus",
@@ -11,104 +12,17 @@ export const metadata: Metadata = {
     "Latest insights and articles on technology, development, and digital transformation",
 };
 
-const blogPosts = [
-  {
-    title: "The Future of Web Development: Trends to Watch in 2024",
-    slug: "future-web-development-trends-2024",
-    excerpt:
-      "Explore the latest trends shaping the future of web development, from AI integration to progressive web apps.",
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=800&h=400&fit=crop",
-    category: "Web Development",
-    date: "2024-01-15",
-    readTime: "5 min read",
-    author: "John Doe",
-  },
-  {
-    title: "Automating Business Processes: A Complete Guide",
-    slug: "automating-business-processes-guide",
-    excerpt:
-      "Learn how workflow automation can transform your business operations and boost productivity.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=800&h=400&fit=crop",
-    category: "Automation",
-    date: "2024-01-10",
-    readTime: "8 min read",
-    author: "Jane Smith",
-  },
-  {
-    title: "Mobile App Development: Native vs Cross-Platform",
-    slug: "mobile-app-development-native-vs-cross-platform",
-    excerpt:
-      "Compare the pros and cons of native and cross-platform mobile app development approaches.",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&h=400&fit=crop",
-    category: "Mobile Development",
-    date: "2024-01-05",
-    readTime: "6 min read",
-    author: "Mike Johnson",
-  },
-  {
-    title: "Cloud Migration Strategies for Enterprise Applications",
-    slug: "cloud-migration-strategies-enterprise",
-    excerpt:
-      "Discover effective strategies for migrating enterprise applications to the cloud with minimal disruption.",
-    image:
-      "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=800&h=400&fit=crop",
-    category: "Cloud Computing",
-    date: "2023-12-28",
-    readTime: "7 min read",
-    author: "Sarah Williams",
-  },
-  {
-    title: "Implementing Effective DevOps Practices in Your Organization",
-    slug: "implementing-effective-devops-practices",
-    excerpt:
-      "Learn how to implement DevOps practices that improve collaboration, efficiency, and software quality.",
-    image:
-      "https://images.unsplash.com/photo-1556075798-4825dfaaf498?w=800&h=400&fit=crop",
-    category: "DevOps",
-    date: "2023-12-20",
-    readTime: "9 min read",
-    author: "David Brown",
-  },
-  {
-    title: "The Role of AI in Modern Software Development",
-    slug: "ai-in-modern-software-development",
-    excerpt:
-      "Explore how artificial intelligence is transforming software development processes and outcomes.",
-    image:
-      "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&h=400&fit=crop",
-    category: "AI & Machine Learning",
-    date: "2023-12-15",
-    readTime: "6 min read",
-    author: "Emily Davis",
-  },
-  {
-    title: "Designing Accessible Web Applications: Best Practices",
-    slug: "designing-accessible-web-applications",
-    excerpt:
-      "Learn how to create web applications that are accessible to users with disabilities.",
-    image:
-      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=800&h=400&fit=crop",
-    category: "Web Development",
-    date: "2023-12-10",
-    readTime: "7 min read",
-    author: "John Doe",
-  },
-  {
-    title: "Cybersecurity Essentials for Modern Businesses",
-    slug: "cybersecurity-essentials-modern-businesses",
-    excerpt:
-      "Discover the essential cybersecurity measures every business should implement to protect their digital assets.",
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=400&fit=crop",
-    category: "Cybersecurity",
-    date: "2023-12-05",
-    readTime: "8 min read",
-    author: "Jane Smith",
-  },
-];
+// Use sample blog posts data
+const blogPosts = sampleBlogPosts.map((post) => ({
+  title: post.title,
+  slug: post.slug.current,
+  excerpt: post.excerpt,
+  image: post.mainImage.asset.url,
+  category: post.categories[0]?.title || "Technology",
+  date: post.publishedAt.split("T")[0],
+  readTime: post.readTime,
+  author: post.author.name,
+}));
 
 export default function BlogPage() {
   return (

@@ -85,12 +85,6 @@ export default {
             },
           ],
         },
-        {
-          type: "code",
-          options: {
-            withFilename: true,
-          },
-        },
       ],
     },
   ],

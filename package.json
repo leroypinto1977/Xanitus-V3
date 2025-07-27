@@ -6,13 +6,18 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "sanity": "sanity dev",
+    "sanity:build": "sanity build",
+    "sanity:deploy": "sanity deploy",
+    "import-data": "node import-sample-data.js"
   },
   "dependencies": {
     "@calcom/embed-react": "^1.5.3",
     "@portabletext/react": "^3.2.1",
     "@radix-ui/react-hover-card": "^1.1.14",
     "@radix-ui/react-slot": "^1.2.3",
+    "@sanity/cli": "^4.1.1",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^4.1.1",
     "class-variance-authority": "^0.7.1",
@@ -23,7 +28,10 @@
     "next-sanity": "^10.0.4",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-is": "^19.0.0",
     "react-intersection-observer": "^9.16.0",
+    "sanity": "^4.1.1",
+    "styled-components": "^6.1.19",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

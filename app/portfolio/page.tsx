@@ -8,6 +8,7 @@ import Link from "next/link";
 import { client, urlFor } from "@/lib/sanity";
 import { ProjectFilter } from "@/components/ui/project-filter";
 import Image from "next/image";
+import { sampleProjects, sampleTechnologies } from "@/data/sampleData";
 
 interface Project {
   _id: string;
@@ -66,58 +67,6 @@ async function getAllTechnologies() {
   }
 }
 
-// Fallback projects for when Sanity is not configured
-const fallbackProjects = [
-  {
-    _id: "1",
-    title: "E-commerce Platform Redesign",
-    slug: { current: "ecommerce-platform-redesign" },
-    client: "Fashion Retailer",
-    mainImage: null,
-    excerpt:
-      "Complete redesign and development of an e-commerce platform, resulting in a 40% increase in conversion rate.",
-    technologies: [
-      { _id: "1", name: "Next.js" },
-      { _id: "2", name: "Tailwind CSS" },
-      { _id: "3", name: "Stripe" },
-      { _id: "4", name: "Sanity CMS" },
-    ],
-    publishedAt: "2024-01-15",
-  },
-  {
-    _id: "2",
-    title: "Mobile Banking Application",
-    slug: { current: "mobile-banking-application" },
-    client: "Financial Services Company",
-    mainImage: null,
-    excerpt:
-      "Secure and user-friendly mobile banking application with advanced features and biometric authentication.",
-    technologies: [
-      { _id: "5", name: "React Native" },
-      { _id: "6", name: "Node.js" },
-      { _id: "7", name: "MongoDB" },
-      { _id: "8", name: "AWS" },
-    ],
-    publishedAt: "2024-02-20",
-  },
-  {
-    _id: "3",
-    title: "Healthcare Management System",
-    slug: { current: "healthcare-management-system" },
-    client: "Regional Hospital",
-    mainImage: null,
-    excerpt:
-      "Comprehensive healthcare management system for patient records, appointments, and billing.",
-    technologies: [
-      { _id: "9", name: "React" },
-      { _id: "10", name: "Express" },
-      { _id: "11", name: "PostgreSQL" },
-      { _id: "12", name: "Docker" },
-    ],
-    publishedAt: "2024-03-10",
-  },
-];
-
 export default function PortfolioPage() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [allProjects, setAllProjects] = useState<Project[]>([]);
@@ -135,17 +84,20 @@ export default function PortfolioPage() {
           getAllTechnologies(),
         ]);
 
-        // Use fallback projects if no projects are fetched from Sanity
+        // Use sample data if no projects are fetched from Sanity
         const finalProjects =
-          projectsData.length > 0 ? projectsData : fallbackProjects;
+          projectsData.length > 0 ? projectsData : sampleProjects;
 
         setAllProjects(finalProjects);
         setProjects(finalProjects);
-        setTechnologies(technologiesData);
+        setTechnologies(
+          technologiesData.length > 0 ? technologiesData : sampleTechnologies
+        );
       } catch (error) {
         console.error("Error fetching data:", error);
-        setAllProjects(fallbackProjects);
-        setProjects(fallbackProjects);
+        setAllProjects(sampleProjects);
+        setProjects(sampleProjects);
+        setTechnologies(sampleTechnologies);
       } finally {
         setIsLoading(false);
       }

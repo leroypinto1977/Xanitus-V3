@@ -7,42 +7,18 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { sampleBlogPosts } from "@/data/sampleData";
 
-const blogPosts = [
-  {
-    title: "The Future of Web Development: Trends to Watch in 2024",
-    excerpt:
-      "Explore the latest trends shaping the future of web development, from AI integration to progressive web apps.",
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=200&fit=crop",
-    category: "Web Development",
-    date: "2024-01-15",
-    readTime: "5 min read",
-    author: "John Doe",
-  },
-  {
-    title: "Automating Business Processes: A Complete Guide",
-    excerpt:
-      "Learn how workflow automation can transform your business operations and boost productivity.",
-    image:
-      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=400&h=200&fit=crop",
-    category: "Automation",
-    date: "2024-01-10",
-    readTime: "8 min read",
-    author: "Jane Smith",
-  },
-  {
-    title: "Mobile App Development: Native vs Cross-Platform",
-    excerpt:
-      "Compare the pros and cons of native and cross-platform mobile app development approaches.",
-    image:
-      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=200&fit=crop",
-    category: "Mobile Development",
-    date: "2024-01-05",
-    readTime: "6 min read",
-    author: "Mike Johnson",
-  },
-];
+// Use first 3 blog posts for the homepage section
+const blogPosts = sampleBlogPosts.slice(0, 3).map((post) => ({
+  title: post.title,
+  excerpt: post.excerpt,
+  image: post.mainImage.asset.url,
+  category: post.categories[0]?.title || "Technology",
+  date: post.publishedAt.split("T")[0],
+  readTime: post.readTime,
+  author: post.author.name,
+}));
 
 export function BlogSection() {
   return (
