@@ -1,17 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// Import Google Fonts
+import { Roboto_Mono, Sora } from "next/font/google";
 import "./globals.css";
-// Update the import path if the file exists at a different location
 import { LayoutWrapper } from "../components/ui/layout-wrapper";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Configure Roboto Mono for headings
+const robotoMono = Roboto_Mono({
   subsets: ["latin"],
+  variable: "--font-roboto-mono",
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Configure Sora for body text
+const sora = Sora({
   subsets: ["latin"],
+  variable: "--font-sora",
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
@@ -26,10 +32,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className={`${sora.variable} ${robotoMono.variable}`}>
+      <body className="antialiased font-sora">
         <LayoutWrapper>{children}</LayoutWrapper>
       </body>
     </html>

@@ -6,8 +6,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-sora);
+  --font-mono: var(--font-roboto-mono);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -116,7 +116,24 @@
   * {
     @apply border-border outline-ring/50;
   }
+  
   body {
     @apply bg-background text-foreground;
+    font-family: var(--font-sora), sans-serif;
+  }
+  
+  /* Apply Roboto Mono to all headings and titles */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-roboto-mono), monospace;
+    font-weight: 700;
+  }
+  
+  /* Utility classes for explicit font usage */
+  .font-heading {
+    font-family: var(--font-roboto-mono), monospace;
+  }
+  
+  .font-body {
+    font-family: var(--font-sora), sans-serif;
   }
 }
