@@ -41,18 +41,22 @@ async function getBlogPost(slug: string): Promise<BlogPost | null> {
 
   try {
     const post = await client.fetch(query, { slug });
-    
+
     if (post) {
       return post;
     }
-    
+
     // Fallback to sample data
-    const samplePost = sampleBlogPosts.find((post) => post.slug.current === slug);
+    const samplePost = sampleBlogPosts.find(
+      (post) => post.slug.current === slug
+    );
     return samplePost || null;
   } catch (error) {
     console.error("Error fetching blog post:", error);
     // Fallback to sample data
-    const samplePost = sampleBlogPosts.find((post) => post.slug.current === slug);
+    const samplePost = sampleBlogPosts.find(
+      (post) => post.slug.current === slug
+    );
     return samplePost || null;
   }
 }
@@ -113,7 +117,9 @@ export default async function BlogPostPage({
         <div className="bg-slate-800/50 border border-slate-700 rounded-lg overflow-hidden mb-8">
           <Image
             src={
-              post.mainImage && typeof post.mainImage === 'object' && post.mainImage.asset
+              post.mainImage &&
+              typeof post.mainImage === "object" &&
+              post.mainImage.asset
                 ? urlFor(post.mainImage).width(800).height(600).url()
                 : post.mainImage?.asset?.url || "/placeholder.jpg"
             }
@@ -154,7 +160,8 @@ export default async function BlogPostPage({
               ))
             ) : (
               <p className="mb-4">
-                {post.excerpt || "This blog post content will be available soon."}
+                {post.excerpt ||
+                  "This blog post content will be available soon."}
               </p>
             )}
           </div>
