@@ -62,7 +62,7 @@ export function HeroSection() {
             <Button
               size="lg"
               variant="outline"
-              className="border-black text-black hover:bg-[#a0ff4a] hover:text-black px-8 py-3 rounded-md transform hover:scale-105 transition-all duration-300"
+              className="border-white text-white hover:bg-[#a0ff4a] hover:text-black px-8 py-3 rounded-md transform hover:scale-105 transition-all duration-300"
             >
               <Play className="mr-2 h-5 w-5" />
               View Our Work

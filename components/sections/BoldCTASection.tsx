@@ -28,7 +28,7 @@ export function BoldCTASection() {
     <div ref={containerRef} className="relative py-16 overflow-hidden">
       {/* Simplified Background */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900" />
+        <div className="absolute inset-0 bg-black" />
         <motion.div
           style={{ y, opacity }}
           className="absolute inset-0 bg-gradient-to-r from-[#a0ff4a]/10 via-transparent to-blue-500/10"
@@ -245,7 +245,7 @@ export function BoldCTASection() {
       </div>
 
       {/* Bottom Gradient */}
-      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-slate-900 to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-gradient-to-t from-black to-transparent pointer-events-none" />
     </div>
   );
 }

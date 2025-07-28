@@ -274,13 +274,10 @@ export function DetailedServicesSection() {
   ];
 
   return (
-    <div
-      ref={containerRef}
-      className="py-24 bg-slate-900 relative overflow-hidden"
-    >
+    <div ref={containerRef} className="py-24 bg-black relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900" />
+        <div className="absolute top-0 left-0 w-full h-full bg-black" />
         <motion.div
           style={{
             y: useTransform(scrollYProgress, [0, 1], [0, -100]),

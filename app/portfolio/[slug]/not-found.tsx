@@ -4,7 +4,7 @@ import { ArrowLeft, FileX } from "lucide-react";
 
 export default function NotFound() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900 pt-24">
+    <main className="min-h-screen bg-black pt-24">
       <div className="container mx-auto max-w-2xl px-4 py-24 text-center">
         <FileX className="h-24 w-24 text-gray-400 mx-auto mb-8" />
 

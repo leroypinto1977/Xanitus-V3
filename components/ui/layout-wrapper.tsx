@@ -17,7 +17,7 @@ export function LayoutWrapper({ children }: { children: React.ReactNode }) {
 
   // For all other routes, render with navbar and footer
   return (
-    <div className="bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900">
+    <div className="bg-black">
       <Navbar />
       <main className="min-h-screen">{children}</main>
       <Footer />

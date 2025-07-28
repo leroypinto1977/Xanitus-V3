@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'sora': ['var(--font-sora)', 'sans-serif'],
-        'roboto-mono': ['var(--font-roboto-mono)', 'monospace'],
+        sora: ["var(--font-sora)", "sans-serif"],
+        "roboto-mono": ["var(--font-roboto-mono)", "monospace"],
       },
     },
   },

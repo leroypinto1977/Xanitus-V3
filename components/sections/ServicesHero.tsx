@@ -28,7 +28,7 @@ export function ServicesHero() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-8"
     >
       {/* Animated Background Elements */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-gray-800 to-slate-900">
+      <div className="absolute inset-0 bg-black">
         <motion.div
           style={{ y, opacity }}
           className="absolute top-32 left-16 w-64 h-64 bg-[#a0ff4a]/10 rounded-full blur-3xl"
@@ -209,7 +209,7 @@ export function ServicesHero() {
       </div>
 
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-900/50 pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50 pointer-events-none" />
     </div>
   );
 }
