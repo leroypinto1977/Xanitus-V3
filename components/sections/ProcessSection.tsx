@@ -70,13 +70,16 @@ export function ProcessSection() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
-              className={`flex items-center mb-16 ${
-                index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+              className={`flex items-center mb-16 relative ${
+                index % 2 === 0
+                  ? "lg:flex-row lg:justify-start"
+                  : "lg:flex-row-reverse lg:justify-start"
               }`}
             >
+              {/* Card */}
               <div
-                className={`w-full lg:w-5/12 ${
-                  index % 2 === 0 ? "lg:pr-8" : "lg:pl-8"
+                className={`w-full lg:w-5/12 relative ${
+                  index % 2 === 0 ? "lg:mr-auto" : "lg:ml-auto"
                 }`}
               >
                 <Card className="bg-slate-800/50 border-slate-700 hover:border-white transition-all duration-300">
@@ -97,14 +100,18 @@ export function ProcessSection() {
                     </div>
                   </CardContent>
                 </Card>
-              </div>
 
-              {/* Timeline dot */}
-              <div className="hidden lg:block w-2/12 flex justify-center">
-                <div className="w-6 h-6 bg-[#a0ff4a] rounded-full border-4 border-slate-900 z-10" />
+                {/* Timeline dot positioned beside each card */}
+                <div
+                  className={`absolute top-1/2 transform -translate-y-1/2 hidden lg:block ${
+                    index % 2 === 0
+                      ? "left-full ml-6" // Right side of left cards
+                      : "right-full mr-6" // Left side of right cards
+                  }`}
+                >
+                  <div className="w-6 h-6 bg-[#a0ff4a] rounded-full border-4 border-slate-900 z-10" />
+                </div>
               </div>
-
-              <div className="hidden lg:block w-5/12" />
             </motion.div>
           ))}
         </div>
